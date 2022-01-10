@@ -1,0 +1,9 @@
+2 34
+
+https://www.youtube.com/watch?v=V1rhxheJg4A
+
+npx create-react-app app-name
+npm i sass
+npm i react-router-dom
+npm i bootstrap
+npm i axios
