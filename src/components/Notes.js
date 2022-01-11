@@ -11,9 +11,9 @@ const Notes = ({ notes }) => {
                             <strong>
                                 {note.title}
                             </strong>
-                            <span>
+                            <small>
                                 {new Date().toLocaleDateString()}
-                            </span>
+                            </small>
                         </div>
                         <button 
                             type="button" 
