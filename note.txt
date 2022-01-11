@@ -7,3 +7,20 @@ npm i sass
 npm i react-router-dom
 npm i bootstrap
 npm i axios
+
+
+  <nav className="navbar navbar-dark bg-primary">
+            <div className="container-fluid">
+                <NavLink 
+                    className="navbar-brand" 
+                    to="/">
+                        Главная
+                </NavLink>
+                <NavLink 
+                    className="navbar-brand" 
+                    to="/about">
+                        Информация
+                </NavLink>
+
+            </div>
+        </nav>
