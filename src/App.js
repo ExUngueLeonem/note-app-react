@@ -6,22 +6,25 @@ import About from './pages/About.js';
 import Navbar from './components/Navbar.js';
 import Alert from './components/Alert.js';
 import AlertState from './context/alert/AlertState.js';
+import FirebaseState from './context/firebase/FirebaseState.js';
 
 
 function App() {
   return (
-    <AlertState>
-      <BrowserRouter>
-        <Navbar/>
-        <div className="container pt-4">
-        <Alert alert={{text: "памагити"}}/>
-          <Routes>
-            <Route path='/' element={<Home />}/>
-            <Route path='/about' element={<About />}/>
-          </Routes>
-        </div>
-      </BrowserRouter>
-    </AlertState>
+    <FirebaseState>
+      <AlertState>
+        <BrowserRouter>
+          <Navbar/>
+          <div className="container pt-4">
+          <Alert alert={{text: "памагити"}}/>
+            <Routes>
+              <Route path='/' element={<Home />}/>
+              <Route path='/about' element={<About />}/>
+            </Routes>
+          </div>
+        </BrowserRouter>
+      </AlertState>
+    </FirebaseState>
   )
 }
 
