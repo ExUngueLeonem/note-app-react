@@ -9,23 +9,19 @@ import Loader from '../components/Loader';
 const Home = () => {
     const {loading, notes, fetchNotes} = useContext(FirebaseContext);
     
-    useEffect(() => {fetchNotes()},
-    //eslint-disable-next-line 
-    [])
-
-    console.log("loading", loading);
+    useEffect(() => {fetchNotes()
+        //eslint-disable-next-line 
+    }, [])
     
     return (
         <>
             <Form/>
             <hr/>
             
-{/*             {loading 
+            {loading 
                 ? <Loader /> 
                 : <Notes notes={notes} />
-            }
- */}            
-                <Loader /> 
+            }          
 
         </>
     );

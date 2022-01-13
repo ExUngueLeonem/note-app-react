@@ -3,8 +3,11 @@ import axios from 'axios';
 import FirebaseContext from "./farebaseContext";
 import { firebaseReducer } from "./firebaseReducer";
 import { FETCH_NOTES, REMOVE_NOTE, SHOW_LOADER } from "../types";
+import { url } from '../../secureVar.js';
 
-const url = process.env.REACT_APP_DB_URL
+//const url = process.env.REACT_APP_DB_URL;
+//const url = 'https://note-app-react-5b411-default-rtdb.europe-west1.firebasedatabase.app';
+//process.env.REACT_APP_DB_URL;
 
 const FirebaseState = ({ children }) => {
     const initialState = {
