@@ -7,7 +7,7 @@ import Loader from '../components/Loader';
 
 
 const Home = () => {
-    const {loading, notes, fetchNotes} = useContext(FirebaseContext);
+    const {loading, notes, fetchNotes, removeNote} = useContext(FirebaseContext);
     
     useEffect(() => {fetchNotes()
         //eslint-disable-next-line 
@@ -20,7 +20,7 @@ const Home = () => {
             
             {loading 
                 ? <Loader /> 
-                : <Notes notes={notes} />
+                : <Notes notes={notes} onRemove={removeNote} />
             }          
 
         </>

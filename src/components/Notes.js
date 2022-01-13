@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Notes = ({ notes }) => {
-
-    const notesItems = (notes) => {
-        return notes.map( (note) => { 
+const Notes = ({ notes, onRemove }) => {
+    return (
+        
+        <ul className="list-group">
+        {notes.map( (note) => { 
             return (
                 <div key={note.id}>
                     <li className="list-group-item d-flex justify-content-between align-items-center">
@@ -12,23 +13,20 @@ const Notes = ({ notes }) => {
                                 {note.title}
                             </strong>
                             <small>
-                                {new Date().toLocaleDateString()}
+                                {note.date}
                             </small>
                         </div>
                         <button 
                             type="button" 
-                            className="btn btn-outline-danger">
+                            className="btn btn-outline-danger"
+                            onClick={() => onRemove(note.id)}
+                            >
                                 X
                         </button>
                     </li>
                 </div>
             )
-        })
-    }
-
-    return (
-        <ul className="list-group">
-            {notesItems(notes)}
+        }).reverse()}
         </ul>
     );
 };
