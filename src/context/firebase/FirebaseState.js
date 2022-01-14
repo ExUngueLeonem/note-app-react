@@ -20,7 +20,6 @@ const FirebaseState = ({ children }) => {
     const fetchNotes = async () => {
         showLoader();
         try {
-
             const res = await axios.get( `${url}/notes.json`)
             
             const payload = Object.keys(res.data).map( key => {
@@ -34,6 +33,7 @@ const FirebaseState = ({ children }) => {
         } catch (error) {
             console.log('бжж база данных пуста');
         }
+
     }
 
     const addNote = async ( title ) => {
