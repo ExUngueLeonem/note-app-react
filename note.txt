@@ -12,6 +12,8 @@ npm i react-router-dom
 npm i bootstrap
 npm i axios
 
+npm i react-transition-group
+
 
   <nav className="navbar navbar-dark bg-primary">
             <div className="container-fluid">
