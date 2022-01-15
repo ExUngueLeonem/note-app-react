@@ -14,6 +14,11 @@ npm i axios
 
 npm i react-transition-group
 
+npm install -g firebase-tools
+firebase login
+firebase init
+firebase deploy
+
 
   <nav className="navbar navbar-dark bg-primary">
             <div className="container-fluid">
